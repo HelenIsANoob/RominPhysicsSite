@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My LaTeX Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic styling (optional) -->
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .equation-block {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #f7f7f7;
+    }
+  </style>
+
+  <!-- MathJax configuration: what counts as math delimiters -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+
+  <!-- Load MathJax from CDN -->
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <h1>My LaTeX Website</h1>
+  <p>
+    This page can render LaTeX. Inline math like
+    $E = mc^2$ goes inside single dollar signs.
+  </p>
+
+  <div class="equation-block">
+    <p>Display equations go inside double dollar signs:</p>
+    $$\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}$$
+  </div>
+
+  <h2>More examples</h2>
+  <p>
+    A typical physics Lagrangian:
+  </p>
+  <div class="equation-block">
+    $$\mathcal{L} = \frac{1}{2} m \dot{x}^2 - V(x)$$
+  </div>
+
+  <p>
+    A tensor equation:
+  </p>
+  <div class="equation-block">
+    $$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$
+  </div>
+
+  <p>
+    You can edit this file and add more LaTeX anywhere in the HTML.
+  </p>
+</body>
+</html>
